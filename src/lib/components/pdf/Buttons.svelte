@@ -1,4 +1,5 @@
 <script lang="ts">
+	let inputFiles: HTMLInputElement;
 	function changeMenu() {
 		if (menu.dataset.open == 'true') {
 			closeMenu();
@@ -82,9 +83,22 @@
 			Compress files
 		</button>
 		<button
+			onclick={() => inputFiles.click()}
 			class="cursor-pointer hover:scale-103 transition-transform relative flex w-[70%] border-b border-gray-300/50 p-3"
 		>
 			Add files
 		</button>
 	</div>
 </div>
+
+<input
+	bind:this={inputFiles}
+	type="file"
+	accept="application/pdf"
+	multiple
+	style="display: none;"
+	onchange={async (e) => {
+		const files = e.currentTarget.files;
+		await uploadFiles(files);
+	}}
+/>

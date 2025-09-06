@@ -35,6 +35,8 @@
 	},
 	"dependencies": {
 		"@types/sortablejs": "^1.15.8",
+		"idb": "^8.0.3",
+		"mupdf": "^1.26.4",
 		"sortablejs": "^1.15.6"
 	}
 }

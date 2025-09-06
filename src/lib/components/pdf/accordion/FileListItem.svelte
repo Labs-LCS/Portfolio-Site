@@ -42,6 +42,10 @@
 			<div class="flex justify-end gap-3">
 				<button
 					class="rounded-full bg-black/10 border border-gray-600/30 px-2 cursor-pointer hover:bg-black/20"
+					>Cover</button
+				>
+				<button
+					class="rounded-full bg-black/10 border border-gray-600/30 px-2 cursor-pointer hover:bg-black/20"
 					>Edit</button
 				>
 				<button

@@ -1,5 +1,8 @@
-class BackgroundColor {
-	hexColor = $state('#000000');
-}
+/* eslint-disable prefer-const */
+
+import { BackgroundColor, PDFObject } from './classes.svelte';
+
+export { bgColor, pdfObjects };
+
 let bgColor = new BackgroundColor();
-export { bgColor };
+let pdfObjects = [PDFObject];
