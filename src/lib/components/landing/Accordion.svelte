@@ -3,7 +3,7 @@
 </script>
 
 <div class="text-white flex flex-col w-full select-none">
-	<details name="portifolio" class="text-white flex flex-col w-full select-none">
+	<details class="text-white flex flex-col w-full select-none">
 		<summary
 			class="sticky hover:scale-99 cursor-pointer pl-3 transition-transform flex top-24 sm:top-18 backdrop-blur-xs bg-black/50 border-b border-gray-700"
 		>
@@ -50,7 +50,7 @@
 		</div>
 	</details>
 
-	<details name="portifolio" class="text-white flex flex-col w-full select-none">
+	<details class="text-white flex flex-col w-full select-none">
 		<summary
 			class="sticky hover:scale-99 cursor-pointer pl-3 transition-transform flex top-24 sm:top-18 backdrop-blur-xs bg-black/50 border-b border-gray-700"
 		>
@@ -97,7 +97,7 @@
 		</div>
 	</details>
 
-	<details name="portifolio" class="text-white flex flex-col w-full select-none">
+	<details class="text-white flex flex-col w-full select-none">
 		<summary
 			class="sticky hover:scale-99 cursor-pointer pl-3 transition-transform flex top-24 sm:top-18 backdrop-blur-xs bg-black/50 border-b border-gray-700"
 		>
@@ -144,7 +144,7 @@
 		</div>
 	</details>
 
-	<details name="portifolio" class="text-white flex flex-col w-full select-none">
+	<details class="text-white flex flex-col w-full select-none">
 		<summary
 			class="sticky hover:scale-99 cursor-pointer pl-3 transition-transform flex top-24 sm:top-18 backdrop-blur-xs bg-black/50 border-b border-gray-700"
 		>
@@ -191,7 +191,7 @@
 		</div>
 	</details>
 
-	<details name="portifolio" class="text-white flex flex-col w-full select-none">
+	<details class="text-white flex flex-col w-full select-none">
 		<summary
 			class="sticky hover:scale-99 cursor-pointer pl-3 transition-transform flex top-24 sm:top-18 backdrop-blur-xs bg-black/50 border-b border-gray-700"
 		>
