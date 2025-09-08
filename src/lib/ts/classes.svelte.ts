@@ -1,5 +1,4 @@
 import { openDB } from 'idb';
-import { PDFDocument } from 'mupdf';
 
 export class BackgroundColor {
 	hexColor = $state('#000000');
@@ -84,17 +83,13 @@ export class PDFObject {
 
 	public static async createFromFile(_file: File, _database: string, _store: string) {
 		try {
-			const buffer = await _file.arrayBuffer(),
-				id = `${Date.now() + _file.size}`,
-				pages = PDFDocument.openDocument(buffer).countPages();
-
 			const pdfInstance = new PDFObject({
-				id: id,
+				id: `${Date.now() + _file.size}`,
 				database: _database,
 				store: _store,
 				size: _file.size,
-				pages: pages,
-				pagesArray: [...Array(pages).keys()],
+				pages: 0,
+				pagesArray: [],
 				name: _file.name,
 				hasCover: false,
 				coverId: '',
