@@ -1,12 +1,18 @@
-<script>
+<script lang="ts">
 	import FilesView from '$lib/components/pdf/accordion/FilesView.svelte';
 	import Buttons from '$lib/components/pdf/Buttons.svelte';
 	import DropArea from '$lib/components/pdf/DropArea.svelte';
 	import Workbench from '$lib/components/pdf/Workbench.svelte';
 	import WorkInfo from '$lib/components/pdf/WorkInfo.svelte';
+	import { initializeIDB } from '$lib/ts/fileUpload.svelte';
 	import { bgColor } from '$lib/ts/globalVariables.svelte';
+	import { onMount } from 'svelte';
 	let gridView = $state(false);
-	let hasFiles = $state(false);
+	let hasFiles = $state(true);
+
+	onMount(async () => {
+		await initializeIDB('pdf_test', 'store_test');
+	});
 </script>
 
 <div class="fixed z-0 h-dvh w-dvw overflow-hidden top-0">

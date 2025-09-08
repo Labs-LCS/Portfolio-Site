@@ -1,12 +1,24 @@
+import { openDB } from 'idb';
 import { PDFObject } from './classes.svelte';
 
-export async function uploadFiles(files: FileList) {
+export async function initializeIDB(databaseName: string, storeName: string) {
+	const db = await openDB(databaseName, 1, {
+		upgrade(_db) {
+			_db.createObjectStore(storeName);
+		}
+	});
+	const tx = db.transaction(storeName, 'readwrite');
+	await tx.objectStore(storeName).clear();
+	await tx.done;
+}
+
+export async function uploadFiles(files: FileList, database: string, store: string) {
 	try {
 		const filesArray = Array.from(files);
-		filesArray.forEach((file) => {
+		filesArray.forEach(async (file) => {
 			if (file.type === 'application/pdf') {
-				const pdf = PDFObject.createFromFile(file, 'pdf_db', 'main_store');
-				console.log(pdf);
+				const pdf = await PDFObject.createFromFile(file, database, store);
+				await pdf?.storeFileInIDB(await file.arrayBuffer());
 			}
 		});
 	} catch (error) {

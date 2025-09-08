@@ -1,8 +1,7 @@
 /* eslint-disable prefer-const */
 
-import { BackgroundColor, PDFObject } from './classes.svelte';
+import { BackgroundColor } from './classes.svelte';
 
-export { bgColor, pdfObjects };
+export { bgColor };
 
 let bgColor = new BackgroundColor();
-let pdfObjects = [PDFObject];

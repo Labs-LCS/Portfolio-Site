@@ -7,8 +7,7 @@
 	<div class="flex p-3 w-full justify-center">
 		<div class="flex w-full sm:w-[75%] sm:max-w-[800px] rounded-md p-3">
 			<div
-				class="relative flex flex-col sm:flex-row gap-4 tracking-wider justify-center items-center"
-				style="font-family: 'Righteous';"
+				class="font-family-righteous relative flex flex-col sm:flex-row gap-4 tracking-wider justify-center items-center"
 			>
 				<div class="absolute w-dvw bottom-[65%] sm:bottom-[17%] blur-xs">
 					<Separator />

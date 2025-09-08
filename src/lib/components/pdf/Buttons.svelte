@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { uploadFiles } from '$lib/ts/fileUpload.svelte';
+
 	let inputFiles: HTMLInputElement;
 	function changeMenu() {
 		if (menu.dataset.open == 'true') {
@@ -60,13 +62,9 @@
 <div
 	bind:this={menu}
 	data-open="false"
-	class="z-100 invisible scale-93 fixed tracking-wider gap-4 transition-transform bottom-12 right-6 w-80 h-80 bg-black/50 backdrop-blur-xs border-orange-600 border rounded-br-4xl rounded-bl-xl rounded-tr-xl rounded-tl-xl"
-	style="font-family: 'Righteous';"
+	class="font-family-righteous z-100 invisible scale-93 fixed tracking-wider gap-4 transition-transform bottom-12 right-6 w-80 h-80 bg-black/50 backdrop-blur-xs border-orange-600 border rounded-br-4xl rounded-bl-xl rounded-tr-xl rounded-tl-xl"
 >
-	<div
-		class="h-full w-full flex flex-col p-6 text-2xl gap-3 text-white/90"
-		style="font-family: 'Righteous';"
-	>
+	<div class="h-full w-full flex flex-col p-6 text-2xl gap-3 text-white/90">
 		<button
 			class="cursor-pointer hover:scale-103 transition-transform relative flex w-full border-b border-gray-300/50 p-3"
 		>
@@ -99,6 +97,10 @@
 	style="display: none;"
 	onchange={async (e) => {
 		const files = e.currentTarget.files;
-		await uploadFiles(files);
+		if (files) {
+			await uploadFiles(files, 'pdf_test', 'store_test');
+		} else {
+			alert('No PDF files were uploaded.');
+		}
 	}}
 />

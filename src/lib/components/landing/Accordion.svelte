@@ -5,18 +5,11 @@
 <div class="text-white flex flex-col w-full select-none">
 	<details class="text-white flex flex-col w-full select-none">
 		<summary
-			class="sticky hover:scale-99 cursor-pointer pl-3 transition-transform flex top-24 sm:top-18 backdrop-blur-xs bg-black/50 border-b border-gray-700"
+			class="font-family-righteous sticky hover:scale-99 cursor-pointer pl-3 transition-transform flex top-24 sm:top-18 backdrop-blur-xs bg-black/50 border-b border-gray-700"
 		>
-			<span class="text-[40px] italic text-orange-600" style="font-family: 'Righteous';"
-				>About me
-			</span>
-			<span
-				class="text-[40px] italic absolute left-3.25 top-0.25 text-blue-700"
-				style="font-family: 'Righteous';">About me</span
-			>
-			<span class="text-[40px] italic absolute left-3.5 top-0.5" style="font-family: 'Righteous';"
-				>About me</span
-			>
+			<span class="text-[40px] italic text-orange-600">About me </span>
+			<span class="text-[40px] italic absolute left-3.25 top-0.25 text-blue-700">About me</span>
+			<span class="text-[40px] italic absolute left-3.5 top-0.5">About me</span>
 		</summary>
 		<div class="text-justify p-3 flex flex-col gap-y-3 text-lg">
 			<span
@@ -52,18 +45,13 @@
 
 	<details class="text-white flex flex-col w-full select-none">
 		<summary
-			class="sticky hover:scale-99 cursor-pointer pl-3 transition-transform flex top-24 sm:top-18 backdrop-blur-xs bg-black/50 border-b border-gray-700"
+			class="font-family-righteous sticky hover:scale-99 cursor-pointer pl-3 transition-transform flex top-24 sm:top-18 backdrop-blur-xs bg-black/50 border-b border-gray-700"
 		>
-			<span class="text-[40px] italic text-orange-600" style="font-family: 'Righteous';"
-				>Personal Projects
-			</span>
-			<span
-				class="text-[40px] italic absolute left-3.25 top-0.25 text-blue-700"
-				style="font-family: 'Righteous';">Personal Projects</span
-			>
-			<span class="text-[40px] italic absolute left-3.5 top-0.5" style="font-family: 'Righteous';"
+			<span class="text-[40px] italic text-orange-600">Personal Projects </span>
+			<span class="text-[40px] italic absolute left-3.25 top-0.25 text-blue-700"
 				>Personal Projects</span
 			>
+			<span class="text-[40px] italic absolute left-3.5 top-0.5">Personal Projects</span>
 		</summary>
 		<div class="text-justify p-3 flex flex-col gap-y-3 text-lg">
 			<span
@@ -99,18 +87,12 @@
 
 	<details class="text-white flex flex-col w-full select-none">
 		<summary
-			class="sticky hover:scale-99 cursor-pointer pl-3 transition-transform flex top-24 sm:top-18 backdrop-blur-xs bg-black/50 border-b border-gray-700"
+			class="font-family-righteous sticky hover:scale-99 cursor-pointer pl-3 transition-transform flex top-24 sm:top-18 backdrop-blur-xs bg-black/50 border-b border-gray-700"
 		>
-			<span class="text-[40px] italic text-orange-600" style="font-family: 'Righteous';"
-				>Study Journey
-			</span>
-			<span
-				class="text-[40px] italic absolute left-3.25 top-0.25 text-blue-700"
-				style="font-family: 'Righteous';">Study Journey</span
+			<span class="text-[40px] italic text-orange-600">Study Journey </span>
+			<span class="text-[40px] italic absolute left-3.25 top-0.25 text-blue-700">Study Journey</span
 			>
-			<span class="text-[40px] italic absolute left-3.5 top-0.5" style="font-family: 'Righteous';"
-				>Study Journey</span
-			>
+			<span class="text-[40px] italic absolute left-3.5 top-0.5">Study Journey</span>
 		</summary>
 		<div class="text-justify p-3 flex flex-col gap-y-3 text-lg">
 			<span
@@ -146,18 +128,11 @@
 
 	<details class="text-white flex flex-col w-full select-none">
 		<summary
-			class="sticky hover:scale-99 cursor-pointer pl-3 transition-transform flex top-24 sm:top-18 backdrop-blur-xs bg-black/50 border-b border-gray-700"
+			class="font-family-righteous sticky hover:scale-99 cursor-pointer pl-3 transition-transform flex top-24 sm:top-18 backdrop-blur-xs bg-black/50 border-b border-gray-700"
 		>
-			<span class="text-[40px] italic text-orange-600" style="font-family: 'Righteous';"
-				>Social Media
-			</span>
-			<span
-				class="text-[40px] italic absolute left-3.25 top-0.25 text-blue-700"
-				style="font-family: 'Righteous';">Social Media</span
-			>
-			<span class="text-[40px] italic absolute left-3.5 top-0.5" style="font-family: 'Righteous';"
-				>Social Media</span
-			>
+			<span class="text-[40px] italic text-orange-600">Social Media </span>
+			<span class="text-[40px] italic absolute left-3.25 top-0.25 text-blue-700">Social Media</span>
+			<span class="text-[40px] italic absolute left-3.5 top-0.5">Social Media</span>
 		</summary>
 		<div class="text-justify p-3 flex flex-col gap-y-3 text-lg">
 			<span
@@ -193,20 +168,14 @@
 
 	<details class="text-white flex flex-col w-full select-none">
 		<summary
-			class="sticky hover:scale-99 cursor-pointer pl-3 transition-transform flex top-24 sm:top-18 backdrop-blur-xs bg-black/50 border-b border-gray-700"
+			class="font-family-righteous sticky hover:scale-99 cursor-pointer pl-3 transition-transform flex top-24 sm:top-18 backdrop-blur-xs bg-black/50 border-b border-gray-700"
 		>
-			<span class="text-[30px] text-start italic text-orange-600" style="font-family: 'Righteous';"
-				>...and about the duck
-			</span>
-			<span
-				class="text-[30px] text-start italic absolute left-3.25 top-0.25 text-blue-700"
-				style="font-family: 'Righteous';">...and about the duck</span
+			<span class="text-[30px] text-start italic text-orange-600">...and about the duck </span>
+			<span class="text-[30px] text-start italic absolute left-3.25 top-0.25 text-blue-700"
+				>...and about the duck</span
 			>
-			<span
-				class="text-[30px] text-start italic absolute left-3.5 top-0.5"
-				style="font-family: 'Righteous';"
-			>
-				...and about the duck</span
+			<span class="text-[30px] text-start italic absolute left-3.5 top-0.5"
+				>...and about the duck</span
 			>
 		</summary>
 		<div class="text-justify p-3 flex flex-col gap-y-3 text-lg">

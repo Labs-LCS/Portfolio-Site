@@ -38,9 +38,8 @@
 	<button
 		onclick={() => inputFiles.click()}
 		class={dragoverHint
-			? 'flex text-center justify-center items-center text-3xl md:text-4xl transition-all duration-600 bg-orange-600/10 text-orange-600/85 backdrop-blur-xs h-50 w-[80%] sm:h-60 md:h-100 md:w-180 rounded-2xl border border-white/40 hover:border-orange-600 inset-shadow-2xs inset-shadow-gray-400'
-			: 'flex cursor-pointer text-center text-white/50 justify-center items-center text-3xl md:text-4xl transition-all duration-600 hover:bg-orange-600/10 hover:text-orange-600/85 backdrop-blur-xs bg-black/5 h-50 w-[80%] sm:h-60 md:h-100 md:w-180 rounded-2xl border border-white/40 hover:border-orange-600 inset-shadow-2xs inset-shadow-gray-400'}
-		style="font-family: 'Righteous';"
+			? 'font-family-righteous flex text-center justify-center items-center text-3xl md:text-4xl transition-all duration-600 bg-orange-600/10 text-orange-600/85 backdrop-blur-xs h-50 w-[80%] sm:h-60 md:h-100 md:w-180 rounded-2xl border border-white/40 hover:border-orange-600 inset-shadow-2xs inset-shadow-gray-400'
+			: 'font-family-righteous flex cursor-pointer text-center text-white/50 justify-center items-center text-3xl md:text-4xl transition-all duration-600 hover:bg-orange-600/10 hover:text-orange-600/85 backdrop-blur-xs bg-black/5 h-50 w-[80%] sm:h-60 md:h-100 md:w-180 rounded-2xl border border-white/40 hover:border-orange-600 inset-shadow-2xs inset-shadow-gray-400'}
 	>
 		Drop your files or click here
 	</button>
