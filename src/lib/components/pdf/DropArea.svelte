@@ -23,10 +23,14 @@
 		e.preventDefault();
 		dragoverHint = false;
 		const files = e.dataTransfer?.files;
-		if (files) {
-			await uploadFiles(files);
-		} else {
-			alert('No PDF files were uploaded.');
+		try {
+			if (files) {
+				await uploadFiles(files, 'pdf_test', 'store_test');
+			} else {
+				alert('No PDF files were uploaded.');
+			}
+		} catch (error) {
+			window.alert(error);
 		}
 	}}
 	role="region"
@@ -54,7 +58,7 @@
 	onchange={async (e) => {
 		const files = e.currentTarget.files;
 		if (files) {
-			await uploadFiles(files);
+			await uploadFiles(files, 'pdf_test', 'store_test');
 		}
 	}}
 />

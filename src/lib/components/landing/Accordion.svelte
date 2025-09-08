@@ -1,5 +1,8 @@
 <script lang="ts">
 	import we from '$lib/assets/we.webp';
+	import AboutMeSection from './AboutMeSection.svelte';
+	import PdfSection from './PdfSection.svelte';
+	import StudyJourneySection from './StudyJourneySection.svelte';
 </script>
 
 <div class="text-white flex flex-col w-full select-none">
@@ -11,36 +14,7 @@
 			<span class="text-[40px] italic absolute left-3.25 top-0.25 text-blue-700">About me</span>
 			<span class="text-[40px] italic absolute left-3.5 top-0.5">About me</span>
 		</summary>
-		<div class="text-justify p-3 flex flex-col gap-y-3 text-lg">
-			<span
-				>In a few words, I’m a self-taught fullstack programmer passionate about technology – all of
-				it, but especially data analysis and software development. I’m currently transitioning into
-				the tech field, studying Systems Analysis and Development at FIAP.</span
-			>
-			<span
-				>As people who know me usually say, “Lucas studies this stuff for fun". <strong
-					>And it’s true:</strong
-				>
-				in recent years, I’ve <strong>explored several languages</strong> (from pure C to Swift;
-				from Vanilla JS to Python with Flask, etc.), <strong>many tools</strong> (from Selenium for
-				WebScraping to a homemade server with NGINX, Docker, Cloudflare Tunnel, where I test my
-				APIs), <strong>solved real problems</strong> (both at work and in freelancing),
-				<strong>and even imaginary ones</strong> (like redesigning the main Logic Gates using only the
-				simple and primitive NAND).</span
-			>
-			<div class="text-xl font-bold flex flex-row">
-				<span>Why? Because it’s what I</span><span class="text-red-500 animate-bounce ease-in-out"
-					>&nbsp;love&nbsp;</span
-				>
-				<span>to do.</span>
-			</div>
-			<span
-				>So, even with a solid background (I graduated in Law at USP) and more than 7 very fruitful
-				years in a field that may seem quite distant to many, I decided to dive headfirst into
-				technology by starting my second degree.</span
-			>
-			<span>This journey will be public! I invite you to follow along here.</span>
-		</div>
+		<AboutMeSection />
 	</details>
 
 	<details class="text-white flex flex-col w-full select-none">
@@ -53,36 +27,7 @@
 			>
 			<span class="text-[40px] italic absolute left-3.5 top-0.5">Personal Projects</span>
 		</summary>
-		<div class="text-justify p-3 flex flex-col gap-y-3 text-lg">
-			<span
-				>In a few words, I’m a self-taught fullstack programmer passionate about technology – all of
-				it, but especially data analysis and software development. I’m currently transitioning into
-				the tech field, studying Systems Analysis and Development at FIAP.</span
-			>
-			<span
-				>As people who know me usually say, “Lucas studies this stuff for fun". <strong
-					>And it’s true:</strong
-				>
-				in recent years, I’ve <strong>explored several languages</strong> (from pure C to Swift;
-				from Vanilla JS to Python with Flask, etc.), <strong>many tools</strong> (from Selenium for
-				WebScraping to a homemade server with NGINX, Docker, Cloudflare Tunnel, where I test my
-				APIs), <strong>solved real problems</strong> (both at work and in freelancing),
-				<strong>and even imaginary ones</strong> (like redesigning the main Logic Gates using only the
-				simple and primitive NAND).</span
-			>
-			<div class="text-xl font-bold flex flex-row">
-				<span>Why? Because it’s what I</span><span class="text-red-500 animate-bounce ease-in-out"
-					>&nbsp;love&nbsp;</span
-				>
-				<span>to do.</span>
-			</div>
-			<span
-				>So, even with a solid background (I graduated in Law at USP) and more than 7 very fruitful
-				years in a field that may seem quite distant to many, I decided to dive headfirst into
-				technology by starting my second degree.</span
-			>
-			<span>This journey will be public! I invite you to follow along here.</span>
-		</div>
+		<PdfSection />
 	</details>
 
 	<details class="text-white flex flex-col w-full select-none">
@@ -94,76 +39,7 @@
 			>
 			<span class="text-[40px] italic absolute left-3.5 top-0.5">Study Journey</span>
 		</summary>
-		<div class="text-justify p-3 flex flex-col gap-y-3 text-lg">
-			<span
-				>In a few words, I’m a self-taught fullstack programmer passionate about technology – all of
-				it, but especially data analysis and software development. I’m currently transitioning into
-				the tech field, studying Systems Analysis and Development at FIAP.</span
-			>
-			<span
-				>As people who know me usually say, “Lucas studies this stuff for fun". <strong
-					>And it’s true:</strong
-				>
-				in recent years, I’ve <strong>explored several languages</strong> (from pure C to Swift;
-				from Vanilla JS to Python with Flask, etc.), <strong>many tools</strong> (from Selenium for
-				WebScraping to a homemade server with NGINX, Docker, Cloudflare Tunnel, where I test my
-				APIs), <strong>solved real problems</strong> (both at work and in freelancing),
-				<strong>and even imaginary ones</strong> (like redesigning the main Logic Gates using only the
-				simple and primitive NAND).</span
-			>
-			<div class="text-xl font-bold flex flex-row">
-				<span>Why? Because it’s what I</span><span class="text-red-500 animate-bounce ease-in-out"
-					>&nbsp;love&nbsp;</span
-				>
-				<span>to do.</span>
-			</div>
-			<span
-				>So, even with a solid background (I graduated in Law at USP) and more than 7 very fruitful
-				years in a field that may seem quite distant to many, I decided to dive headfirst into
-				technology by starting my second degree.</span
-			>
-			<span>This journey will be public! I invite you to follow along here.</span>
-		</div>
-	</details>
-
-	<details class="text-white flex flex-col w-full select-none">
-		<summary
-			class="font-family-righteous sticky hover:scale-99 cursor-pointer pl-3 transition-transform flex top-24 sm:top-18 backdrop-blur-xs bg-black/50 border-b border-gray-700"
-		>
-			<span class="text-[40px] italic text-orange-600">Social Media </span>
-			<span class="text-[40px] italic absolute left-3.25 top-0.25 text-blue-700">Social Media</span>
-			<span class="text-[40px] italic absolute left-3.5 top-0.5">Social Media</span>
-		</summary>
-		<div class="text-justify p-3 flex flex-col gap-y-3 text-lg">
-			<span
-				>In a few words, I’m a self-taught fullstack programmer passionate about technology – all of
-				it, but especially data analysis and software development. I’m currently transitioning into
-				the tech field, studying Systems Analysis and Development at FIAP.</span
-			>
-			<span
-				>As people who know me usually say, “Lucas studies this stuff for fun". <strong
-					>And it’s true:</strong
-				>
-				in recent years, I’ve <strong>explored several languages</strong> (from pure C to Swift;
-				from Vanilla JS to Python with Flask, etc.), <strong>many tools</strong> (from Selenium for
-				WebScraping to a homemade server with NGINX, Docker, Cloudflare Tunnel, where I test my
-				APIs), <strong>solved real problems</strong> (both at work and in freelancing),
-				<strong>and even imaginary ones</strong> (like redesigning the main Logic Gates using only the
-				simple and primitive NAND).</span
-			>
-			<div class="text-xl font-bold flex flex-row">
-				<span>Why? Because it’s what I</span><span class="text-red-500 animate-bounce ease-in-out"
-					>&nbsp;love&nbsp;</span
-				>
-				<span>to do.</span>
-			</div>
-			<span
-				>So, even with a solid background (I graduated in Law at USP) and more than 7 very fruitful
-				years in a field that may seem quite distant to many, I decided to dive headfirst into
-				technology by starting my second degree.</span
-			>
-			<span>This journey will be public! I invite you to follow along here.</span>
-		</div>
+		<StudyJourneySection />
 	</details>
 
 	<details class="text-white flex flex-col w-full select-none">
