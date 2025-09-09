@@ -4,63 +4,55 @@
 
 <div class="text-justify p-3 flex flex-col gap-y-3 text-lg">
 	<div class="flex flex-col text-white gap-x-4 items-center gap-y-2">
-		<h3 class="text-2xl font-family-righteous tracking-wider text-orange-500 italic">
-			Academic Activities
-		</h3>
-		<ul class="p-6 text-left">
-			<li>
-				<strong>COMPLETED COURSES:</strong>
-				<ul class="space-y-3">
-					<li>
-						<strong>API Patterns: From HTTP to API modeling.</strong>
-						<p>
-							- Certification:
-							<a
-								class="underline text-orange-400 hover:text-orange-500"
-								href="https://cursos.alura.com.br/formalCertificate/95ddfa7f-383e-4d11-ad72-723d99f2b5e0"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								https://cursos.alura.com.br/formalCertificate/95ddfa7f-383e-4d11-ad72-723d99f2b5e0
-							</a>
-						</p>
-					</li>
-					<li>
-						<strong>NGINX: Web server, Reverse Proxy, and API Gateway.</strong>
-						<p>
-							- Certification:
-							<a
-								class="underline text-orange-400 hover:text-orange-500"
-								href="https://cursos.alura.com.br/formalCertificate/f2172ea8-1963-4a6a-9a6e-4faaacb5ffbc"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								https://cursos.alura.com.br/formalCertificate/f2172ea8-1963-4a6a-9a6e-4faaacb5ffbc
-							</a>
-						</p>
-						<p>
-							- Where I used it: I created a home server (https://labs-lcs-server.com/), currently
-							in production, where I will eventually host my APIs. I'm building it with Docker +
-							Ubuntu Server.
-						</p>
-					</li>
-					<li>
-						<strong>Git and GitHub: sharing and collaborating on projects.</strong>
-						<p>
-							- Certification:
-							<a
-								class="underline text-orange-400 hover:text-orange-500"
-								href="https://cursos.alura.com.br/formalCertificate/1b1a64e7-3397-41f8-90da-76982cbffeca"
-								target="_blank"
-								rel="noopener noreferrer"
-							>
-								https://cursos.alura.com.br/formalCertificate/1b1a64e7-3397-41f8-90da-76982cbffeca
-							</a>
-						</p>
-					</li>
-				</ul>
-			</li>
-		</ul>
+		<div class="flex flex-col md:max-w-[80%] px-2">
+			<div>
+				<span class="text-2xl font-family-righteous tracking-wider text-orange-500 italic">
+					<b> Completed Courses </b></span
+				>
+
+				<div class="flex flex-col text-justify gap-y-6 py-3">
+					<span
+						><strong>☆ API Patterns: From HTTP to API modeling </strong><br />
+						<a
+							class="underline text-orange-400 hover:text-orange-500"
+							href="https://cursos.alura.com.br/formalCertificate/95ddfa7f-383e-4d11-ad72-723d99f2b5e0"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Certification
+						</a>
+					</span>
+					<span
+						><strong>☆ NGINX: Web server, Reverse Proxy, and API Gateway </strong><br />
+						<a
+							class="underline text-orange-400 hover:text-orange-500"
+							href="https://cursos.alura.com.br/formalCertificate/f2172ea8-1963-4a6a-9a6e-4faaacb5ffbc"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Certification
+						</a><br />- Where I used it: I created a home server (https://labs-lcs-server.com/),
+						currently in production, where I will eventually host my APIs. I'm building it with
+						Docker + Ubuntu Server.
+					</span>
+
+					<span>
+						<strong>☆ Git and GitHub: sharing and collaborating on projects </strong><br />
+						<a
+							class="underline text-orange-400 hover:text-orange-500"
+							href="https://cursos.alura.com.br/formalCertificate/1b1a64e7-3397-41f8-90da-76982cbffeca"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							Certification
+						</a><br />- Where I used it: I created a home server (https://labs-lcs-server.com/),
+						currently in production, where I will eventually host my APIs. I'm building it with
+						Docker + Ubuntu Server.
+					</span>
+				</div>
+			</div>
+		</div>
+
 		<Separator />
 		<img src="/nand2tetris_3.webp" alt="Screenshot" class="w-200" />
 		<div class="flex flex-col md:max-w-[80%] px-2">

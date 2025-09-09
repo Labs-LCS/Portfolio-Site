@@ -20,6 +20,14 @@
 >
 	<span>&#9888;</span><span>UNDER DEVELOPMENT</span><span>&#9888;</span>
 </div>
+<div
+	class="flex flex-col z-99999 fixed top-[80%] justify-center gap-4 text-center p-5 items-center bg-black/50 backdrop-blur-xs text-orange-500 bold text-3xl w-full"
+>
+	<span> Still want to use the old site? </span>
+	<span class="underline">
+		<a href="https://pdf-client-side.vercel.app/pdf_editor"> Access here </a>
+	</span>
+</div>
 
 <div class="fixed z-0 h-dvh w-dvw overflow-hidden top-0">
 	{#if bgColor.hexColor == '#000000'}
