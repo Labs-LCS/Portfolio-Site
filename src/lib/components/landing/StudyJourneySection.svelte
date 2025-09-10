@@ -113,34 +113,5 @@
 			</div>
 		</div>
 		<Separator />
-		<img src="/nand2tetris_3.webp" alt="Screenshot" class="w-200" />
-		<div class="flex flex-col md:max-w-[80%] px-2">
-			<div>
-				<span class="text-2xl font-family-righteous tracking-wider text-orange-500 italic">
-					<b>☆ Ongoing: Nand2Tetris </b></span
-				>
-
-				<div class="flex flex-col text-justify gap-y-3 py-3">
-					<span
-						>This project is part of my ongoing participation in the Nand2Tetris course, which
-						explores the entire hierarchy of computer systems — from basic logic gates to a
-						functioning operating system and compiler.</span
-					><span>
-						I'm taking this course to gain a deeper and more practical understanding of how
-						computers work at every level. By building these foundations from first principles, I
-						aim to move beyond dependency on high-level abstractions and frameworks.</span
-					><span>
-						This approach supports more informed decision-making when designing complex systems, and
-						fosters a stronger, more independent problem-solving mindset.</span
-					><span
-						>GitHub Repository: <a
-							class="underline text-orange-400 hover:text-orange-500"
-							href="https://github.com/Labs-LCS/NAND2Tetris"
-							>https://github.com/Labs-LCS/NAND2Tetris</a
-						></span
-					>
-				</div>
-			</div>
-		</div>
 	</div>
 </div>
