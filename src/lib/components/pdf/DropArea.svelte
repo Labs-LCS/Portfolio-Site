@@ -25,7 +25,7 @@
 		const files = e.dataTransfer?.files;
 		try {
 			if (files) {
-				await uploadFiles(files, 'pdf_test', 'store_test');
+				await uploadFiles(files);
 			} else {
 				alert('No PDF files were uploaded.');
 			}
@@ -58,7 +58,7 @@
 	onchange={async (e) => {
 		const files = e.currentTarget.files;
 		if (files) {
-			await uploadFiles(files, 'pdf_test', 'store_test');
+			await uploadFiles(files);
 		}
 	}}
 />
