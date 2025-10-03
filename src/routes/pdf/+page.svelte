@@ -15,8 +15,13 @@
 	});
 </script>
 
+<<<<<<< Updated upstream
 <div
 	class="flex flex-row z-99999 fixed top-[50%] justify-center gap-4 text-center p-5 items-center bg-black/50 backdrop-blur-xs text-orange-500 bold text-3xl md:text-5xl w-full"
+=======
+<!-- <div
+	class="flex flex-row z-99999 fixed sm:top-[50%] top-[40%] justify-center gap-4 text-center p-5 items-center bg-black/50 backdrop-blur-xs text-orange-500 bold text-3xl md:text-5xl w-full"
+>>>>>>> Stashed changes
 >
 	<span>&#9888;</span><span>UNDER DEVELOPMENT</span><span>&#9888;</span>
 </div>
@@ -27,7 +32,7 @@
 	<span class="underline">
 		<a href="https://pdf-client-side.vercel.app/pdf_editor"> Access here </a>
 	</span>
-</div>
+</div> -->
 
 <div class="fixed z-0 h-dvh w-dvw overflow-hidden top-0">
 	{#if bgColor.hexColor == '#000000'}

@@ -1,5 +1,5 @@
 import { openDB } from 'idb';
-import { PDFObject } from './classes.svelte';
+import { RemotePDFObject } from './classes.svelte';
 
 export async function initializeIDB(databaseName: string, storeName: string) {
 	const db = await openDB(databaseName, 1, {
@@ -12,15 +12,15 @@ export async function initializeIDB(databaseName: string, storeName: string) {
 	await tx.done;
 }
 
-export async function uploadFiles(files: FileList, database: string, store: string) {
+export async function uploadFiles(files: FileList) {
 	try {
 		const filesArray = Array.from(files);
-		filesArray.forEach(async (file) => {
-			if (file.type === 'application/pdf') {
-				const pdf = await PDFObject.createFromFile(file, database, store);
-				await pdf?.storeFileInIDB(await file.arrayBuffer());
+		for (let i = 0; i < filesArray.length; i++) {
+			if (filesArray[i].type === 'application/pdf') {
+				console.log(filesArray[i]);
+				await RemotePDFObject.createFromFile('identificador', filesArray[i]);
 			}
-		});
+		}
 	} catch (error) {
 		console.error(error);
 	}

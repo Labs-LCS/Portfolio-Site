@@ -1,105 +1,118 @@
-import { openDB } from 'idb';
+// import { openDB } from 'idb';
+
+// class IndexedDB {
+//   database = "pdf_local_db";
+//   store = "main";
+// }
+
+// let idb = new IndexedDB();
 
 export class BackgroundColor {
 	hexColor = $state('#000000');
 }
 
 interface PDFObjectProps {
-	id: string;
-	database: string;
-	store: string;
-	size: number;
-	pages?: number;
-	pagesArray?: number[];
-	name: string;
-	hasCover?: boolean;
-	coverId?: string;
-	tag?: string;
-	selected?: boolean;
+	id: number;
+	uuid: string;
+	original_filename: string;
+	stored_filename: number;
+	file_size_bytes: number;
+	mime_type: string;
+	page_count: number;
+	tags: string[];
+	cover_id: number;
+	created_at: string;
 }
 
-export class PDFObject {
-	id: string;
-	database: string;
-	store: string;
-	size: number;
-	pages?: number;
-	pagesArray?: number[];
-	name: string;
-	hasCover?: boolean;
-	coverId?: string;
-	tag?: string;
-	selected?: boolean;
+export class RemotePDFObject {
+	id: number;
+	uuid: string;
+	original_filename: string;
+	stored_filename: number;
+	file_size_bytes: number;
+	mime_type: string;
+	page_count: number;
+	tags: string[];
+	cover_id: number;
+	created_at: string;
 
 	private constructor(props: PDFObjectProps) {
 		this.id = $state(props.id);
-		this.database = $state(props.database);
-		this.store = $state(props.store);
-		this.size = $state(props.size);
-		this.pages = $state(props.pages);
-		this.pagesArray = $state(props.pagesArray);
-		this.name = $state(props.name);
-		this.hasCover = $state(props.hasCover);
-		this.coverId = $state(props.coverId);
-		this.tag = $state(props.tag);
-		this.selected = $state(props.selected);
+		this.uuid = $state(props.uuid);
+		this.original_filename = $state(props.original_filename);
+		this.stored_filename = $state(props.stored_filename);
+		this.file_size_bytes = $state(props.file_size_bytes);
+		this.mime_type = $state(props.mime_type);
+		this.page_count = $state(props.page_count);
+		this.tags = $state(props.tags);
+		this.cover_id = $state(props.cover_id);
+		this.created_at = $state(props.created_at);
 	}
 
-	public async getBufferFromIDB() {
-		try {
-			const db = await openDB(this.database);
-			const buffer: ArrayBuffer = await db.get(this.store, this.id);
-			return buffer;
-		} catch (error) {
-			console.error(error);
-			return null;
-		}
-	}
+	// private async storeInLocalDB() {
+	// try {
 
-	public async deleteFileFromIDB() {
-		try {
-			const db = await openDB(this.database);
-			await db.delete(this.store, this.id);
-			if (this.hasCover && this.coverId) {
-				await db.delete(this.store, this.coverId);
-			}
-			return true;
-		} catch (error) {
-			console.error(error);
-			return false;
-		}
-	}
+	// } catch (error) {
+	// 	console.error(error);
+	// }
+	// }
 
-	public async storeFileInIDB(buffer: ArrayBuffer) {
-		try {
-			const db = await openDB(this.database);
-			await db.add(this.store, buffer, this.id);
-			return true;
-		} catch (error) {
-			console.error(error);
-			return false;
-		}
-	}
+	// public async storeInDB(buffer: ArrayBuffer) {
+	// 	try {
 
-	public static async createFromFile(_file: File, _database: string, _store: string) {
+	// 	} catch (error) {
+	// 		console.error(error);
+	// 	}
+	// }
+	// private async deleteFromLocalDB() {
+
+	// }
+
+	// public async deleteFromDB() {
+	// 	try {
+
+	// 	} catch (error) {
+	// 		console.error(error);
+	// 	}
+	// }
+
+	// public async getBuffer() {
+	// 	try {
+
+	// 		return buffer;
+	// 	} catch (error) {
+	// 		console.error(error);
+	// 		return null;
+	// 	}
+	// }
+
+	public static async createFromFile(_id: string, _file: File, _tags: string[] = ['pdf']) {
 		try {
-			const pdfInstance = new PDFObject({
-				id: `${Date.now() + _file.size}`,
-				database: _database,
-				store: _store,
-				size: _file.size,
-				pages: 0,
-				pagesArray: [],
-				name: _file.name,
-				hasCover: false,
-				coverId: '',
-				tag: '',
-				selected: false
+			const formData = new FormData();
+			formData.append('id', _id);
+			formData.append('file', _file);
+
+			const tags = _tags;
+			formData.append('tags', JSON.stringify(tags));
+
+			const response = await fetch('/api/pdfs', {
+				method: 'POST',
+				body: formData
 			});
 
+			if (!response.ok) {
+				const error = await response.json();
+				throw new Error(error.detail || `Failed to upload ${_file.name}`);
+			}
+
+			const serverProps: RemotePDFObject = await response.json();
+
+			const pdfInstance = new RemotePDFObject(serverProps);
+
+			console.log(pdfInstance);
 			return pdfInstance;
 		} catch (error) {
-			console.error(error);
+			throw new Error(String(error));
 		}
 	}
 }
