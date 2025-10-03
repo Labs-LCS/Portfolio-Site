@@ -1,5 +1,6 @@
 import { openDB } from 'idb';
 import { RemotePDFObject } from './classes.svelte';
+import { remoteItems } from './globalVariables.svelte';
 
 export async function initializeIDB(databaseName: string, storeName: string) {
 	const db = await openDB(databaseName, 1, {
@@ -18,7 +19,8 @@ export async function uploadFiles(files: FileList) {
 		for (let i = 0; i < filesArray.length; i++) {
 			if (filesArray[i].type === 'application/pdf') {
 				console.log(filesArray[i]);
-				await RemotePDFObject.createFromFile('identificador', filesArray[i]);
+				const newFile = await RemotePDFObject.createFromFile('identificador', filesArray[i]);
+				remoteItems.push(newFile);
 			}
 		}
 	} catch (error) {
