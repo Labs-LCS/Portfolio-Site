@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FilesView from './accordion/FilesView.svelte';
+	import FilesView from './items/ItemsView.svelte';
 	let workbench: HTMLDivElement,
 		expanded: boolean = $state(false);
 </script>

@@ -1,7 +1,8 @@
 <script lang="ts">
 	import Sortable from 'sortablejs';
 	import { onMount } from 'svelte';
-	import FileListItem from './FileListItem.svelte';
+	import Item from './Item.svelte';
+	import { remoteItems } from '$lib/ts/globalVariables.svelte';
 
 	let { gridView } = $props();
 
@@ -28,19 +29,8 @@
 		class:p-2={!gridView}
 		class:max-w-100={!gridView}
 	>
-		<FileListItem {gridView} />
-		<FileListItem {gridView} />
-		<FileListItem {gridView} />
-		<FileListItem {gridView} />
-		<FileListItem {gridView} />
-		<FileListItem {gridView} />
-		<FileListItem {gridView} />
-		<FileListItem {gridView} />
-		<FileListItem {gridView} />
-		<FileListItem {gridView} />
-		<FileListItem {gridView} />
-		<FileListItem {gridView} />
-		<FileListItem {gridView} />
-		<FileListItem {gridView} />
+		{#each remoteItems as pdf (pdf.id)}
+			<Item {pdf} {gridView} />
+		{/each}
 	</ul>
 </div>

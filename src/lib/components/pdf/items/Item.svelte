@@ -1,8 +1,8 @@
 <script lang="ts">
-	let { gridView } = $props();
-	let size = '3,2MB',
-		pages = 30,
-		selected = $state(false);
+	import type { RemotePDFObject } from '$lib/ts/classes.svelte';
+
+	let { gridView, pdf }: { gridView: boolean; pdf: RemotePDFObject } = $props();
+	let selected = $state(false);
 </script>
 
 {#if gridView}
@@ -13,7 +13,7 @@
 				<h3
 					class="absolute h-full w-full text-center content-center text-transparent hover:text-white hover:backdrop-blur-xs hover:bg-black/70 transition-all"
 				>
-					Nome do arquivo
+					{pdf.original_filename}
 				</h3>
 			</div>
 		</div>
@@ -54,8 +54,8 @@
 				>
 			</div>
 			<div class="text-xs text-gray-500 flex justify-end gap-x-4 italic">
-				<span>{size}</span>
-				<span>{pages} pages</span>
+				<span>{pdf.file_size_bytes}</span>
+				<span>{pdf.page_count} pages</span>
 			</div>
 		</div>
 	</li>

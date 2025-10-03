@@ -1,7 +1,9 @@
 /* eslint-disable prefer-const */
 
-import { BackgroundColor } from './classes.svelte';
+import { BackgroundColor, RemotePDFObject } from './classes.svelte';
 
-export { bgColor };
+export { bgColor, remoteItems };
 
 let bgColor = new BackgroundColor();
+
+let remoteItems: RemotePDFObject[] = $state([]);

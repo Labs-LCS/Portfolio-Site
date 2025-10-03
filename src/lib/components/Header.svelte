@@ -5,7 +5,7 @@
 	import { bgColor } from '$lib/ts/globalVariables.svelte';
 </script>
 
-<div
+<header
 	class="z-99 fixed top-0 flex justify-between py-2 px-4 w-full min-h-18 backdrop-blur-xs bg-black/50 border-b border-gray-700 flex-wrap select-none"
 >
 	{#if page.route.id == '/'}
@@ -16,7 +16,7 @@
 				<span class="text-xs italic">Developed by Lucas Campanhã dos Santos</span>
 			</div>
 		</div>
-		<div
+		<nav
 			class="sm:gap-x-4 font-extralight flex text-white items-center justify-evenly max-sm:w-full pt-3"
 		>
 			<div>
@@ -68,7 +68,7 @@
 					</svg>
 				</a>
 			</div>
-		</div>
+		</nav>
 	{:else if page.route.id == '/pdf'}
 		<div class="flex justify-between w-full flex-row items-center gap-x-2">
 			<div class="flex items-center gap-x-2">
@@ -98,4 +98,4 @@
 			</div>
 		</div>
 	{/if}
-</div>
+</header>
