@@ -20,19 +20,19 @@ The implementation of this project will proceed as follows:
 
 ### **2. Core API and Endpoints**
 * [ ] Implement the base structure of endpoints in FastAPI.
-* [ ] Create the POST endpoint to receive files and initiate tasks.
+* [x] Create the POST endpoint to receive files and initiate tasks.
 * [ ] Create the GET endpoint to check progress.
-* [ ] Create the GET endpoint to download the final file.
+* [x] Create the GET endpoint to download the final file.
 * …
 
 ### **3. Authentication and Security**
-* [ ] Develop a reusable dependency (Depends) to validate the Firebase JWT token from the Authorization header.
+* [ ] Logic to validate all requests, even if the user is logged in.
 * [ ] Protect all API endpoints with the authentication dependency.
 * …
 
 ### **4. State and File Management**
 * [ ] Implement an in-memory dictionary to manage task states.
-* [ ] Create logic to save uploaded files in a temporary directory with unique names.
+* [x] Create logic to save uploaded files in a temporary directory with unique names.
 * [ ] Implement logic to clean up temporary files (input/output) after a successful download.
 * …
 
@@ -46,7 +46,7 @@ The implementation of this project will proceed as follows:
 * …
 
 ### **6. Frontend Integration**
-* [ ] Modify the frontend to upload files to the new endpoint.
+* [x] Modify the frontend to upload files to the new endpoint.
 * [ ] Implement polling logic in the frontend to periodically check processing status.
 * [ ] Ensure that the Firebase authentication token is sent in all backend requests, even after log in (Zero Trust).
 * …
