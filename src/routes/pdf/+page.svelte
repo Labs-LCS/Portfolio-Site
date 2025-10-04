@@ -1,5 +1,5 @@
 <script lang="ts">
-	import FilesView from '$lib/components/pdf/items/ItemsView.svelte';
+	import ItemsView from '$lib/components/pdf/items/ItemsView.svelte';
 	import Buttons from '$lib/components/pdf/Buttons.svelte';
 	import DropArea from '$lib/components/pdf/DropArea.svelte';
 	import Workbench from '$lib/components/pdf/Workbench.svelte';
@@ -45,7 +45,7 @@
 		</div>
 
 		<div class="flex w-full justify-center">
-			<FilesView {gridView} />
+			<ItemsView {gridView} />
 		</div>
 		<Workbench />
 	</div>

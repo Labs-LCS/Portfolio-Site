@@ -18,8 +18,8 @@ export async function uploadFiles(files: FileList) {
 		const filesArray = Array.from(files);
 		for (let i = 0; i < filesArray.length; i++) {
 			if (filesArray[i].type === 'application/pdf') {
-				console.log(filesArray[i]);
-				const newFile = await RemotePDFObject.createFromFile('identificador', filesArray[i]);
+				const id = crypto.randomUUID();
+				const newFile = await RemotePDFObject.createFromFile(id, filesArray[i]);
 				remoteItems.push(newFile);
 			}
 		}

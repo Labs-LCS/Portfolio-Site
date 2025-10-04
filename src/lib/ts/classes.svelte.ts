@@ -109,7 +109,6 @@ export class RemotePDFObject {
 
 			const pdfInstance = new RemotePDFObject(serverProps);
 
-			console.log(pdfInstance);
 			return pdfInstance;
 		} catch (error) {
 			throw new Error(String(error));

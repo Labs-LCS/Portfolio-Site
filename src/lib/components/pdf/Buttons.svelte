@@ -1,4 +1,5 @@
 <script lang="ts">
+	import { downloadFileFromServer } from '$lib/ts/fileDownload.svelte';
 	import { uploadFiles } from '$lib/ts/fileUpload.svelte';
 
 	let inputFiles: HTMLInputElement;
@@ -67,6 +68,7 @@
 	<div class="h-full w-full flex flex-col p-6 text-2xl gap-3 text-white/90">
 		<button
 			class="cursor-pointer hover:scale-103 transition-transform relative flex w-full border-b border-gray-300/50 p-3"
+			onclick={() => downloadFileFromServer('string')}
 		>
 			Download
 		</button>
