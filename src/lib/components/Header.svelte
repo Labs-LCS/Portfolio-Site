@@ -10,7 +10,7 @@
 </script>
 
 <header
-	class="z-99 fixed top-0 w-full flex flex-wrap justify-between p-4 backdrop-blur-xs bg-black/50 border-b border-gray-700 select-none gap-x-2 text-white"
+	class="z-99 fixed top-0 w-full flex max-sm:flex-wrap justify-between p-4 backdrop-blur-xs bg-black/50 border-b border-gray-700 select-none gap-x-2 text-white"
 >
 	<div class="flex space-x-4">
 		<img class="h-11" src="/icons/labs-lcs.webp" alt="Labs-LCS Logomark" />
@@ -20,7 +20,7 @@
 		</div>
 	</div>
 	{#if page.route.id == '/'}
-		<nav class="flex justify-evenly w-full font-extralight mt-4">
+		<nav class="flex justify-evenly max-sm:w-full sm:gap-6 sm:mr-4 font-extralight mt-4">
 			<a class="cursor-pointer hover:text-orange-600" href={resolve('/pdf')} target="_blank"
 				>PDF Editor</a
 			>
