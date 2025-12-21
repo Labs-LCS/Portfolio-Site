@@ -2,7 +2,6 @@
 	import { resolve } from '$app/paths';
 	import { page } from '$app/state';
 	import me from '$lib/assets/me.webp';
-	import { bgColor } from '$lib/ts/globalVariables.svelte';
 
 	let landing = page.route.id == '/';
 	let h1 = landing ? 'Labs.LCS - Projects' : 'PDF Editor';
@@ -10,7 +9,10 @@
 </script>
 
 <header
-	class="z-99 fixed top-0 w-full flex max-sm:flex-wrap justify-between p-4 backdrop-blur-xs bg-black/50 border-b border-gray-700 select-none gap-x-2 text-white"
+	class={[
+		'z-99 fixed top-0 w-full flex max-sm:flex-wrap justify-between p-4 backdrop-blur-xs border-b border-gray-700 select-none gap-x-2 text-white',
+		page.route.id == '/pdf' ? 'bg-black/50' : 'bg-black/80'
+	]}
 >
 	<div class="flex space-x-4">
 		<img class="h-11" src="/icons/labs-lcs.webp" alt="Labs-LCS Logomark" />
@@ -31,17 +33,10 @@
 			>
 		</nav>
 	{:else if page.route.id == '/pdf'}
-		<div class="flex items-center gap-4">
-			<input
-				type="color"
-				class="h-10 w-10"
-				oninput={(e) => (bgColor.hexColor = e.currentTarget.value)}
-			/>
-			<img
-				src={me}
-				alt="Me"
-				class="rounded-full h-12 w-12 object-cover border border-orange-600 shadow-sm shadow-blue-600/80"
-			/>
-		</div>
+		<img
+			src={me}
+			alt="Me"
+			class="rounded-full h-12 w-12 object-cover border border-orange-600 shadow-sm shadow-blue-600/80"
+		/>
 	{/if}
 </header>

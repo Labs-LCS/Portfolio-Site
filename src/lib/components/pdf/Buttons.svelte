@@ -15,6 +15,11 @@
 	function openMenu() {
 		menuBtn.classList.add('rotate-45');
 		menuBtn.classList.remove('bg-orange-600/50');
+		menuBtn.classList.remove('hover:bg-orange-600/80');
+		menuBtn.classList.remove('border-orange-600');
+		menuBtn.classList.add('bg-red-700/50');
+		menuBtn.classList.add('hover:bg-red-700/80');
+		menuBtn.classList.add('border-red-600');
 		menu.classList.remove('invisible');
 		menu.classList.remove('scale-93');
 	}
@@ -22,6 +27,11 @@
 	function closeMenu() {
 		menuBtn.classList.remove('rotate-45');
 		menuBtn.classList.add('bg-orange-600/50');
+		menuBtn.classList.add('hover:bg-orange-600/80');
+		menuBtn.classList.add('border-orange-600');
+		menuBtn.classList.remove('bg-red-700/50');
+		menuBtn.classList.remove('hover:bg-red-700/80');
+		menuBtn.classList.remove('border-red-600');
 		menu.classList.add('scale-93');
 		setTimeout(() => {
 			menu.classList.add('invisible');
@@ -35,11 +45,11 @@
 	<button
 		bind:this={menuBtn}
 		aria-label="Buttons"
-		class="z-101 cursor-pointer fill-gray-200/70 flex transition-all items-center justify-center rounded-full h-12 w-12 bg-orange-600/50 text-3xl backdrop-blur-xs border border-orange-600 hover:bg-orange-600/80"
+		class="cursor-pointer transition-transform rounded-full h-12 w-12 bg-orange-600/50 border border-orange-600 hover:bg-orange-600/80"
 		onclick={() => changeMenu()}
 	>
 		<svg
-			class="h-8"
+			class="h-8 fill-gray-200/70 m-auto"
 			version="1.1"
 			id="Layer_1"
 			xmlns="http://www.w3.org/2000/svg"
@@ -62,27 +72,26 @@
 <div
 	bind:this={menu}
 	data-open="false"
-	class="font-family-righteous z-100 invisible scale-93 fixed tracking-wider gap-4 transition-transform bottom-12 right-6 w-80 h-80 bg-black/50 backdrop-blur-xs border-orange-600 border rounded-br-4xl rounded-bl-xl rounded-tr-xl rounded-tl-xl"
+	class="font-family-righteous invisible z-100 fixed tracking-wider transition-transform bottom-12 right-6 bg-black/50 backdrop-blur-xs border-orange-600 border rounded-xl rounded-br-4xl"
 >
-	<div class="h-full w-full flex flex-col p-6 text-2xl gap-3 text-white/90">
+	<div class="text-2xl text-white/70 p-3">
 		<button
-			class="cursor-pointer hover:scale-103 transition-transform relative flex w-full border-b border-gray-300/50 p-3"
+			class="cursor-pointer flex w-full border-b border-gray-300/50 p-2 mb-2 hover:text-white"
 		>
 			Download
 		</button>
 		<button
-			class="cursor-pointer hover:scale-103 transition-transform relative flex w-full border-b border-gray-300/50 p-3"
+			class="cursor-pointer flex w-full border-b border-gray-300/50 p-2 mb-2 hover:text-white"
 		>
 			Merge all
 		</button>
 		<button
-			class="cursor-pointer hover:scale-103 transition-transform relative flex w-full border-b border-gray-300/50 p-3"
+			class="cursor-pointer flex w-full border-b border-gray-300/50 p-2 mb-2 hover:text-white"
 		>
 			Compress files
 		</button>
 		<button
-			onclick={() => inputFiles.click()}
-			class="cursor-pointer hover:scale-103 transition-transform relative flex w-[70%] border-b border-gray-300/50 p-3"
+			class="cursor-pointer flex w-[70%] border-b border-gray-300/50 p-2 mb-2 hover:text-white"
 		>
 			Add files
 		</button>
