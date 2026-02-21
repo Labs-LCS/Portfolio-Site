@@ -5,7 +5,7 @@
 	import AboutTheDuck from './AboutTheDuck.svelte';
 </script>
 
-<div class="text-white flex flex-col w-full select-none">
+<div class="mb-8 text-white flex flex-col w-full select-none">
 	<details class="select-none" open>
 		<summary
 			class="font-family-righteous sticky hover:scale-99 cursor-pointer pl-3 top-29 sm:top-19 backdrop-blur-xs bg-black/50 border-b border-gray-700 list-none"

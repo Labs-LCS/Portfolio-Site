@@ -14,6 +14,6 @@
 	alt="Landscape Photography of Mountains Covered in Snow"
 />
 
-<div class="flex overflow-hidden">
+<div class="sm:flex overflow-hidden">
 	{@render children?.()}
 </div>

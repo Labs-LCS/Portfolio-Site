@@ -2,7 +2,6 @@
 	import Sortable from 'sortablejs';
 	import { onMount } from 'svelte';
 	import Item from './Item.svelte';
-	import { remoteItems } from '$lib/ts/globalVariables.svelte';
 
 	let filesUL: HTMLUListElement;
 
@@ -15,9 +14,8 @@
 	});
 </script>
 
-<div class="z-10 h-[calc(100dvh-80px)] sm:min-w-108 mx-2 overflow-y-scroll no-scrollbar">
-	<ul bind:this={filesUL} class="flex flex-col gap-3 pt-4 px-2 pb-32 sm:pb-14">
-		<!-- {#each remoteItems as pdf (pdf.id)} -->
+<div class="z-10 h-[calc(100dvh-80px)] sm:min-w-108 overflow-y-scroll no-scrollbar">
+	<ul bind:this={filesUL} class="flex flex-col gap-3 pt-4 px-4 mb-32 sm:mb-14">
 		<Item />
 		<Item />
 		<Item />
@@ -30,6 +28,5 @@
 		<Item />
 		<Item />
 		<Item />
-		<!-- {/each} -->
 	</ul>
 </div>

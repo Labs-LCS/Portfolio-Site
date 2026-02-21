@@ -3,8 +3,17 @@
 	import Separator from '../Separator.svelte';
 </script>
 
+<div class="mt-9 sm:mt-0 p-2 text-center bg-orange-600 font-small">
+	<p>This site was last updated in September 2025.</p>
+	<p class="max-w-prose m-auto">
+		Since then, I've been focused on developing and scaling legal automation systems at <a
+			href="https://mottu.com.br"
+			class="font-bold underline">Mottu</a
+		>, specifically regarding risk mitigation for consumer and labor relations.
+	</p>
+</div>
 <div
-	class="font-family-righteous relative flex flex-col sm:flex-row gap-4 tracking-wider justify-center items-center mt-10 mb-8 pr-8 pl-8"
+	class="font-family-righteous relative flex flex-col sm:flex-row gap-4 tracking-wider justify-center items-center mt-10 mb-8 max-sm:pr-8 max-sm:pl-8"
 >
 	<div class="absolute w-dvw bottom-[65%] sm:bottom-[17%] blur-xs">
 		<Separator />

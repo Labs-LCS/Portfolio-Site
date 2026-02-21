@@ -3,39 +3,41 @@
 </script>
 
 <section class="p-6">
-	<h4 class="text-2xl font-bold font-family-righteous tracking-wider text-orange-500 italic mb-4">
-		Completed Courses
-	</h4>
+	<div>
+		<h4 class="text-2xl font-bold font-family-righteous tracking-wider text-orange-500 italic mb-4">
+			Completed Courses
+		</h4>
 
-	<p class="font-bold">☆ API Patterns: From HTTP to API modeling</p>
-	<a
-		class="underline text-orange-400 hover:text-orange-500"
-		href="https://cursos.alura.com.br/formalCertificate/95ddfa7f-383e-4d11-ad72-723d99f2b5e0"
-		target="_blank"
-		rel="noopener noreferrer"
-	>
-		Certification
-	</a>
+		<p class="font-bold">☆ API Patterns: From HTTP to API modeling</p>
+		<a
+			class="underline text-orange-400 hover:text-orange-500"
+			href="https://cursos.alura.com.br/formalCertificate/95ddfa7f-383e-4d11-ad72-723d99f2b5e0"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			Certification
+		</a>
 
-	<p class="font-bold mt-4">☆ NGINX: Web server, Reverse Proxy, and API Gateway</p>
-	<a
-		class="underline text-orange-400 hover:text-orange-500"
-		href="https://cursos.alura.com.br/formalCertificate/f2172ea8-1963-4a6a-9a6e-4faaacb5ffbc"
-		target="_blank"
-		rel="noopener noreferrer"
-	>
-		Certification
-	</a>
+		<p class="font-bold mt-4">☆ NGINX: Web server, Reverse Proxy, and API Gateway</p>
+		<a
+			class="underline text-orange-400 hover:text-orange-500"
+			href="https://cursos.alura.com.br/formalCertificate/f2172ea8-1963-4a6a-9a6e-4faaacb5ffbc"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			Certification
+		</a>
 
-	<p class="font-bold mt-4">☆ Git and GitHub: sharing and collaborating on projects</p>
-	<a
-		class="underline text-orange-400 hover:text-orange-500"
-		href="https://cursos.alura.com.br/formalCertificate/1b1a64e7-3397-41f8-90da-76982cbffeca"
-		target="_blank"
-		rel="noopener noreferrer"
-	>
-		Certification
-	</a>
+		<p class="font-bold mt-4">☆ Git and GitHub: sharing and collaborating on projects</p>
+		<a
+			class="underline text-orange-400 hover:text-orange-500"
+			href="https://cursos.alura.com.br/formalCertificate/1b1a64e7-3397-41f8-90da-76982cbffeca"
+			target="_blank"
+			rel="noopener noreferrer"
+		>
+			Certification
+		</a>
+	</div>
 </section>
 
 <Separator />
