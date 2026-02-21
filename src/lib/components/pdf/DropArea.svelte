@@ -3,10 +3,11 @@
 	import Separator from '../Separator.svelte';
 	let inputFiles: HTMLInputElement;
 	let dragoverHint = $state(false);
+	let dropAreaText = 'Drop your files or click here';
 </script>
 
 <div
-	class="flex justify-center relative select-none pt-10"
+	class="flex justify-center relative select-none mt-15 md:mt-20"
 	ondragover={(e) => {
 		e.preventDefault();
 		dragoverHint = true;
@@ -36,16 +37,14 @@
 	role="region"
 	aria-label="File upload drop zone"
 >
-	<div class="absolute w-full top-20 sm:top-26 md:top-45 transition-all duration-600">
+	<div class="absolute w-full h-full content-center">
 		<Separator />
 	</div>
 	<button
 		onclick={() => inputFiles.click()}
-		class={dragoverHint
-			? 'font-family-righteous flex text-center justify-center items-center text-3xl md:text-4xl transition-all duration-600 bg-orange-600/10 text-orange-600/85 backdrop-blur-xs h-50 w-[80%] sm:h-60 md:h-100 md:w-180 rounded-2xl border border-white/40 hover:border-orange-600 inset-shadow-2xs inset-shadow-gray-400'
-			: 'font-family-righteous flex cursor-pointer text-center text-white/50 justify-center items-center text-3xl md:text-4xl transition-all duration-600 hover:bg-orange-600/10 hover:text-orange-600/85 backdrop-blur-xs bg-black/5 h-50 w-[80%] sm:h-60 md:h-100 md:w-180 rounded-2xl border border-white/40 hover:border-orange-600 inset-shadow-2xs inset-shadow-gray-400'}
+		class="z-100 font-family-righteous cursor-pointer text-center text-white/70 text-3xl hover:text-white bg-black/50 h-50 mx-10 px-5 rounded-2xl border border-white/70 hover:border-white"
 	>
-		Drop your files or click here
+		{dropAreaText}
 	</button>
 </div>
 

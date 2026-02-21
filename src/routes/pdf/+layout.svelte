@@ -8,4 +8,12 @@
 	<link rel="icon" href={favicon} />
 </svelte:head>
 
-{@render children?.()}
+<img
+	class="fixed top-0 h-dvh w-dvw object-cover"
+	src="/bg-pdf.webp"
+	alt="Landscape Photography of Mountains Covered in Snow"
+/>
+
+<div class="sm:flex overflow-hidden">
+	{@render children?.()}
+</div>
