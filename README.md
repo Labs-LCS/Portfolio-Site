@@ -1,4 +1,3 @@
-
 # Current Project: backend implementation of my PDF Editor (prototype) website
 
 ## Motivation
