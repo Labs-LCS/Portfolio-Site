@@ -17,7 +17,6 @@
 		"@eslint/compat": "^2.0.2",
 		"@eslint/js": "^9.18.0",
 		"@sveltejs/adapter-static": "^3.0.10",
-		"@sveltejs/adapter-vercel": "^6.3.2",
 		"@sveltejs/kit": "^2.53.0",
 		"@sveltejs/vite-plugin-svelte": "^6.0.0",
 		"@tailwindcss/vite": "^4.0.0",
@@ -35,10 +34,6 @@
 		"vite": "^7.0.4"
 	},
 	"dependencies": {
-		"@fontsource/montserrat-alternates": "^5.2.7",
-		"@fontsource/righteous": "^5.2.6",
-		"@types/sortablejs": "^1.15.8",
-		"idb": "^8.0.3",
-		"sortablejs": "^1.15.6"
+		"@fontsource/righteous": "^5.2.6"
 	}
 }
